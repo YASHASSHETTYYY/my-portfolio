@@ -6,39 +6,46 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 const Certifications = () => {
   const certifications = [
     {
-      title: "Google Cloud Professional Data Engineer Exam",
-      issuer: "Google (In Progress)",
+      title: "Preparing for the Google Cloud Professional Data Engineer Exam",
+      issuer: "Google Cloud",
       date: "2023",
-      description: "Preparing for certification that validates expertise in leveraging Google Cloud services for designing, building, and maintaining data processing systems.",
-      link: "#"
+      description: "Preparation for certification that validates expertise in leveraging Google Cloud services for designing, building, and maintaining data processing systems.",
+      link: "https://courses.edx.org/certificates/42b27b46c4ab454d908d9155882f4cec"
     },
     {
       title: "Analyzing Data with Excel",
-      issuer: "Microsoft",
+      issuer: "IBM",
       date: "2023",
       description: "Covers advanced Excel techniques for data analysis including PivotTables, data modeling, and visualization.",
-      link: "#"
+      link: "https://courses.edx.org/certificates/278dd9e3a4184d1aa9486765f2751bc7"
     },
     {
       title: "Data Visualization and Building Dashboards with Excel and Cognos",
       issuer: "IBM",
       date: "2022",
       description: "Comprehensive training in creating effective data visualizations and interactive dashboards using Excel and IBM Cognos.",
-      link: "#"
+      link: "https://courses.edx.org/certificates/732da61049b34fcf8f62acfad193efa6"
     },
     {
       title: "Data Warehousing and BI Analytics",
       issuer: "IBM",
       date: "2022",
       description: "Covers data warehousing concepts, dimensional modeling, and business intelligence analytics techniques.",
-      link: "#"
+      link: "https://courses.edx.org/certificates/9eac35696aef459fbbdfd8921c2dd56f"
     },
     {
-      title: "SQL for Data Science",
+      title: "Django Application Development with SQL and Databases",
       issuer: "IBM",
       date: "2022",
-      description: "Focused on SQL querying techniques specifically for data science applications and data extraction.",
-      link: "#"
+      description: "Focused on developing web applications using Django framework with SQL databases.",
+      link: "https://courses.edx.org/certificates/fa90114c61324dc5860dcd5782bdd3d5"
+    },
+    {
+      title: "Data Analytics and Databases on AWS",
+      issuer: "Amazon Web Services",
+      date: "2022",
+      description: "Training on using AWS services for data analytics and database management.",
+      link: "https://courses.edx.org/certificates/483b85f759b8446d9eef47874522d6dd"
     },
     {
       title: "Cybersecurity Workshop",
@@ -71,7 +78,7 @@ const Certifications = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
-            <Card key={index} className="hover-scale">
+            <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center mb-2">
                   <Award className="h-5 w-5 text-slate-700 mr-2" />
@@ -89,11 +96,9 @@ const Certifications = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Link to={cert.link}>
-                  <button className="text-slate-600 hover:text-slate-800 flex items-center text-sm font-medium">
-                    View Certificate <ExternalLink className="ml-1 h-3 w-3" />
-                  </button>
-                </Link>
+                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-slate-600 hover:text-slate-800 font-medium">
+                  View Certificate <ExternalLink className="ml-1 h-3 w-3" />
+                </a>
               </CardFooter>
             </Card>
           ))}
