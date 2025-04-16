@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, MessageSquare, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 
@@ -15,38 +15,43 @@ const Projects = () => {
         
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">My Projects</h1>
         <p className="text-lg text-slate-600 mb-10 max-w-3xl">
-          A selection of data science and machine learning projects I've worked on. Each demonstrates different skills and technologies I use to solve complex problems.
+          A selection of data analysis and machine learning projects I've worked on. Each demonstrates different skills and technologies I use to solve real-world problems.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Project 1 */}
           <Card className="hover-scale">
             <CardHeader className="bg-slate-100">
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-bold text-slate-800">Predictive Analytics Dashboard</CardTitle>
+                <CardTitle className="text-xl font-bold text-slate-800">Sales Sentiment Analysis</CardTitle>
+                <MessageSquare className="h-5 w-5 text-slate-600" />
               </div>
               <CardDescription className="text-slate-600">
-                Sales forecasting and customer segmentation
+                NLP-based customer sentiment analysis
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
               <p className="text-slate-700 mb-4">
-                Developed a machine learning model for sales forecasting with 92% accuracy, integrating customer segmentation algorithms to identify high-value customer groups.
+                Analyzed customer reviews and sales data to understand sentiment trends using NLP techniques with Python (NLTK, Vader) to classify sentiment scores.
+              </p>
+              <p className="text-slate-700 mb-4">
+                Developed an interactive dashboard in Tableau for business insights, allowing stakeholders to visualize customer satisfaction trends.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Python</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">TensorFlow</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">NLTK</span>
                 <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Tableau</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">NLP</span>
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button variant="outline" size="sm" className="text-slate-700">
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Live Demo
+                Demo
               </Button>
               <Button variant="outline" size="sm" className="text-slate-700">
                 <Github className="mr-2 h-4 w-4" />
-                Source Code
+                Code
               </Button>
             </CardFooter>
           </Card>
@@ -55,62 +60,35 @@ const Projects = () => {
           <Card className="hover-scale">
             <CardHeader className="bg-slate-100">
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-bold text-slate-800">Natural Language Processing System</CardTitle>
+                <CardTitle className="text-xl font-bold text-slate-800">Churn Prediction Analysis</CardTitle>
+                <TrendingUp className="h-5 w-5 text-slate-600" />
               </div>
               <CardDescription className="text-slate-600">
-                Advanced sentiment analysis platform
+                Machine learning model for customer retention
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
               <p className="text-slate-700 mb-4">
-                Created an NLP system that analyzes customer feedback across multiple channels, providing real-time sentiment analysis and topic extraction with 87% accuracy.
+                Built a machine learning model to predict customer churn using logistic regression and decision trees, with SQL for data extraction and preprocessing.
+              </p>
+              <p className="text-slate-700 mb-4">
+                Created a Power BI dashboard to visualize churn patterns and risk factors, enabling proactive customer retention strategies.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">NLP</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">BERT</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Machine Learning</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">SQL</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Power BI</span>
                 <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Python</span>
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button variant="outline" size="sm" className="text-slate-700">
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Case Study
+                Demo
               </Button>
               <Button variant="outline" size="sm" className="text-slate-700">
                 <Github className="mr-2 h-4 w-4" />
-                Source Code
-              </Button>
-            </CardFooter>
-          </Card>
-          
-          {/* Project 3 */}
-          <Card className="hover-scale">
-            <CardHeader className="bg-slate-100">
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-bold text-slate-800">Anomaly Detection System</CardTitle>
-              </div>
-              <CardDescription className="text-slate-600">
-                Real-time fraud detection platform
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <p className="text-slate-700 mb-4">
-                Built a real-time anomaly detection system for financial transactions, reducing false positives by 35% while maintaining a 98.5% detection rate for fraudulent activity.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Machine Learning</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Kafka</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-800 text-xs rounded-full">Spark</span>
-              </div>
-            </CardContent>
-            <CardFooter className="flex justify-between">
-              <Button variant="outline" size="sm" className="text-slate-700">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                White Paper
-              </Button>
-              <Button variant="outline" size="sm" className="text-slate-700">
-                <Github className="mr-2 h-4 w-4" />
-                Source Code
+                Code
               </Button>
             </CardFooter>
           </Card>

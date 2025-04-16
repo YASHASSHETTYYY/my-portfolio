@@ -1,27 +1,32 @@
 
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Star } from 'lucide-react';
+import { ArrowLeft, Star, Languages } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'Python', proficiency: 95 },
-    { name: 'R', proficiency: 85 },
-    { name: 'SQL', proficiency: 90 },
-    { name: 'TensorFlow', proficiency: 85 },
-    { name: 'PyTorch', proficiency: 80 },
+    { name: 'Python (Pandas, NumPy, Scikit-learn)', proficiency: 90 },
+    { name: 'SQL', proficiency: 85 },
+    { name: 'Power BI', proficiency: 88 },
+    { name: 'R', proficiency: 80 },
+    { name: 'Tableau', proficiency: 85 },
     { name: 'Data Visualization', proficiency: 90 },
-    { name: 'Machine Learning', proficiency: 92 },
-    { name: 'Statistical Analysis', proficiency: 88 },
+    { name: 'Machine Learning', proficiency: 82 },
+    { name: 'Statistical Analysis', proficiency: 85 },
   ];
 
   const softSkills = [
-    'Data-Driven Decision Making',
-    'Problem Solving',
-    'Technical Communication',
-    'Project Management',
-    'Team Leadership',
-    'Domain Research',
+    'Analytical Thinking',
+    'Problem-Solving',
+    'Communication & Presentation',
+    'Attention to Detail',
+    'Team Collaboration',
+  ];
+  
+  const languages = [
+    { name: 'English', level: 'Fluent' },
+    { name: 'Hindi', level: 'Fluent' },
+    { name: 'Kannada', level: 'Basic' },
   ];
 
   return (
@@ -34,7 +39,7 @@ const Skills = () => {
         
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">Skills & Expertise</h1>
         <p className="text-lg text-slate-600 mb-10 max-w-3xl">
-          With a background in data science and machine learning, I've developed a diverse set of technical and soft skills applicable across various industries.
+          With a background in data analysis and machine learning, I've developed a diverse set of technical and soft skills applicable across various industries.
         </p>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -68,13 +73,26 @@ const Skills = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Languages */}
+            <h2 className="text-2xl font-bold mb-6 mt-10 text-slate-800 flex items-center">
+              <Languages className="mr-2 h-5 w-5" /> Languages
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {languages.map((lang) => (
+                <div key={lang.name} className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                  <span className="font-medium text-slate-700">{lang.name}</span>
+                  <span className="block text-sm text-slate-500 mt-1">{lang.level}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4 text-slate-800">Tools & Technologies</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {['Python', 'R', 'SQL', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'Tableau', 'Power BI', 'Jupyter', 'AWS', 'Azure ML', 'Git', 'Docker', 'Kubernetes'].map((tool) => (
+            {['Python', 'R', 'SQL', 'Power BI', 'Tableau', 'Matplotlib', 'Seaborn', 'Pandas', 'NumPy', 'Scikit-learn', 'MySQL', 'PostgreSQL', 'Excel', 'Google Analytics', 'NLTK'].map((tool) => (
               <div key={tool} className="bg-slate-100 py-2 px-4 rounded-md text-center text-slate-700">
                 {tool}
               </div>
