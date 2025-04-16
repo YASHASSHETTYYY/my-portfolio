@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import Canvas3D from '@/components/Canvas3D';
 
 const Index = () => {
@@ -17,9 +18,13 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-indigo-700 max-w-2xl mx-auto mb-8 animate-fade-in backdrop-blur-sm bg-white/30 p-4 rounded-lg" style={{ animationDelay: '0.2s' }}>
             Creating loveable AI experiences through data-driven insights
           </p>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <Link 
+            to="/projects" 
+            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fade-in" 
+            style={{ animationDelay: '0.4s' }}
+          >
             Explore My Work
-          </button>
+          </Link>
         </div>
       </section>
     </div>
